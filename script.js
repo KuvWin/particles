@@ -2,12 +2,12 @@
     let config = {
         dotMinRad: 1,
         dotMaxRad: 20,
-        sphereRad: 800,
+        sphereRad: 400,
         bigDotRad: 20,
         mouseSize: 50,
         massFactor: 0.002,
         defColor: 'rgba(250,10,30,0.8)',
-        smooth: 0.65,
+        smooth: 0.55,
     }
 
     let controlForbigDotRad = document.getElementById("bigDotRad");
