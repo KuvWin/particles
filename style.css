@@ -44,8 +44,7 @@ canvas {
 
 .navigation h1 {
     margin: 0 0 50px 0;
-    background-color: #3b275c67;
-    box-shadow: inset 2px 2px 2px -2px rgba(235, 243, 245, 0.8), -2px -2px 2px -2px #6b477c67;
+    background-color: #4b385c67;
     border-radius: 5px;
     padding: 5px 20px 5px 20px;
     font-size: 2.6rem;
@@ -60,7 +59,6 @@ canvas {
     border-radius: 22px;
     padding: 9px 47px 11px 47px;
     width: 80%;
-
 }
 
 input[type="range"] {
@@ -90,4 +88,52 @@ input[type=range]::-webkit-slider-runnable-track {
     box-shadow: none;
     border: none;
     background: transparent;
+}
+
+@media screen and (max-height: 850px) {
+    .navigation {
+        right: 10px;
+        top: 10px;
+        background-image: linear-gradient(-195deg, rgba(228, 74, 82, 0.096), rgba(41, 3, 13, 0.11), rgba(209, 37, 108, 0.055), rgba(175, 33, 121, 0.089), rgba(30, 3, 48, 0.185));
+        box-shadow: 8px 8px 14px rgba(7, 3, 31, 0.11), inset 2px 2px 3px -2px rgba(235, 243, 245, 0.3), inset -2px -3px 3px -3px rgba(149, 71, 201, 0.24);
+        backdrop-filter: blur(17px);
+        color: rgb(250, 249, 234);
+        border-radius: 10px;
+        height: 600px;
+        padding: 20px 30px 20px 30px;
+        cursor: pointer;
+    }
+
+    .navigation h1 {
+        margin: 0 0 20px 0;
+        background-color: #4b385c67;
+        border-radius: 5px;
+        padding: 5px 20px 5px 20px;
+        font-size: 1.6rem;
+    }
+
+    .navigation div {
+        margin: 7px 0 15px 0;
+        padding: 2px 47px 5px 47px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .navigation {
+        left: 5px;
+        top: 5px;
+        width: 80%;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .navigation div {
+        margin: 7px 0 15px 0;
+        padding: 4px 7px 4px 7px;
+        border-radius: 3px;
+    }
+
+    body {
+        font-size: 0.7rem;
+    }
+
 }
