@@ -1,13 +1,13 @@
 (() => {
     let config = {
         dotMinRad: 1,
-        dotMaxRad: 20,
-        sphereRad: 400,
+        dotMaxRad: 10,
+        sphereRad: 350,
         bigDotRad: 20,
-        mouseSize: 50,
-        massFactor: 0.002,
-        defColor: 'rgba(250,10,30,0.8)',
-        smooth: 0.55,
+        mouseSize: 30,
+        massFactor: 0.001,
+        defColor: 'rgba(250,10,30,0.6)',
+        smooth: 0.15,
     }
 
     let controlForbigDotRad = document.getElementById("bigDotRad");
