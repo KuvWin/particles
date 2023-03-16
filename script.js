@@ -147,5 +147,7 @@
     window.addEventListener('mousemove', setPos); //canvas windField
     window.addEventListener('mousedown', isDown);
     window.addEventListener('mouseup', isDown);
-    window.addEventListener('touch', () => {alert("work")});
+    window.addEventListener('touchmove', setPos);
+    window.addEventListener('touchstart', isDown);
+    window.addEventListener('touchend', isDown);
 })();
