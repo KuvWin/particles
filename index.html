@@ -1,281 +1,65 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>guitar_website_fromsolo</title>
-		<link href="guitar_website_fromsolo.css" rel="stylesheet" type="text/css"/>
-		<script src="guitar_website_fromsolo.js" defer></script>
-		<link href="https://fonts.googleapis.com/css?family=Arimo|Lora|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|PT+Sans+Narrow|PT+Serif|Roboto+Slab" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=PT+Sans+Narrow&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div class="wrapper">
-    
-    
-    
-         
-      
-      
-      
-          
-        
-        <div class="menu-block">
-             <a href="#" class="menu-btn">
-             <span></span>
-             </a>  
-        </div>
-         
+    <!-- <div class="wind-field" id="wind-field">1</div> -->
+    <canvas id="canv"></canvas>
+    <nav class="navigation">
+        <h1>Particles settings:</h1>
 
-        <div class="header" id="k1">
-            <div class="inner-header_back">
-            </div>    
-        
-        
-            <div class="inner-header">
-            
-<div class="kusok"><a href="#c1">Главная</a> </div>
-<div class="kusok"><a href="#c2">Методика</a> </div>
-<div class="kusok"><a href="#c3">Преподаватели</a> </div>
-<div class="kusok"><a href="#c4">Отзывы</a> </div>
-<div class="kusok"><a href="#c5">Контакты</a> </div>
-            </div>
-        </div> 
-        <div class="content">
-            
-            
-            
-             <div class="inner-content-f1">
-            <div class="inner-content-f1-back"></div>
-            <div class="inner-content-f1-front">
-                <h1>
-                    Курс гитары для начинающих    
-                </h1>
-             Научим играть на гитаре за 10 занятий или вернем деньги.
-                 <div class="cnopka-1">
-                 бесплатный урок
-                 </div>
-                 <div class="cnopka-2">
-                 заказать звонок
-                 </div>
-            </div>
+        <label for="dotMinRad">минимальный размер точек</label>
+        <div>
+            <input type="range" id="dotMinRad" name="dotMinRad" min="1" max="4" value="1" step="1">
         </div>
-            
-            
-        
-            <div class="inner-content-1" id="c1">
-                content 1<br/>
-                Гитара - музыкальный инструмент. Спасибо Кэп.                  
-            </div>
-            
-             <div class="inner-content-f2">
-             фото 2
-            </div>
-            
-             <div class="inner-content-1" id="c2">
-                content 2<br/>
-                если вы хотите научиться играть, то берите и учитесь! Самоучииель вам в помощь. Если у вас медведь правого уха, знайте это просто левые отмазы для того чтобы также замечательно ничего не делать и дальше =)
-            </div>
-            
-             <div class="inner-content-f3">
-             фото 3
-            </div>
-            
-            <div class="inner-content-1" id="c3">
-                contenr 3<br/>
-                Если вам все же нужен человек, который будет вас пинать, то наш преподаватель с удовольствием будет вас пинать за 700р в час.
-            </div>
-            
-             <div class="inner-content-f4">
-             фото 4
-            </div>
-            
 
-  
-  
-  
-  
-   
-  
-  
-  
-       
-       <!--  отзывы -->
-       <div class="otzivi" id="c4">
-    наши ученики
+        <label for="dotMaxRad">максимальный размер точек</label>
+        <div>
+            <input type="range" id="dotMaxRad" name="dotMaxRad" min="5" max="50" value="7" step="1">
+        </div>
 
- <!--  1 уч -->
-<div class="inner-content">
-    <div class="inner-content_header">  
-        <div class="inner-content_avatar" style="background-image:url('https://images.unsplash.com/photo-1494565093000-a5e84e4e3cdf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3685d51df6d8b01ac9a17cbf3a780897&auto=format&fit=crop&w=1208&q=80');">                  
+        <label for="sphereRad">радиус распространения точек</label>
+        <div>
+            <input type="range" id="sphereRad" name="sphereRad" min="1" max="2000" value="800" step="1">
         </div>
-        <div class="inner-content_shapka">
-             <div  class="inner-content_name">
-                 <p class="p1">
-                 Андрей Константинов
-                 </p> 
-             </div>
-             <div class="inner-content_media">   
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/768px-VK.com-logo.svg.png" class="media">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png" class="media">
-             <img src="http://www.lineaviaggi.com/wp-content/uploads/2015/07/youtube-icon-logo-05A29977FC-seeklogo.com_.png"   class="media">
-             </div>
+
+        <label for="bigDotRad">радиус главной точки</label>
+        <div>
+            <input type="range" id="bigDotRad" name="bigDotRad" min="1" max="100" value="30" step="1">
         </div>
-    </div>
-    <div class="inner-contant_text">
-         До того как я пошел на курс guitar-learn, я пытался учиться играть самостоятельно по видео на ютубе,но в голове не складывалась система. Пройдя курс я заполнил все пробелы и построил прочный фундамент и теперь точно знаю как и что играть и в каком направлении хочу развиваться дальше.
-    </div>
-</div>  
+
+        <label for="mouseSize">радиус действия главной точки</label>
+        <div>
+            <input type="range" id="mouseSize" name="mouseSize" min="1" max="500" value="150" step="1">
+        </div>
+
+        <label for="massFactor">фактор массы</label>
+        <div>
+            <input type="range" id="massFactor" name="massFactor" min="0.0001" max="0.009" value="0.002" step="0.0001">
+        </div>
+
+        <label for="smooth">вязкость среды</label>
+        <div>
+            <input type="range" id="smooth" name="smooth" min="0.00" max="1.00" value="0.95" step="0.01">
+        </div>
 
 
- <!--  2 уч -->
-<div class="inner-content">
-    <div class="inner-content_header">  
-        <div class="inner-content_avatar" style="background-image:url('https://images.unsplash.com/photo-1502160836-112bd0f5bdee?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=545ecc54f828025cf4342c3cbf248634&auto=format&fit=crop&w=1050&q=80');">                  
-        </div>
-        <div class="inner-content_shapka">
-             <div  class="inner-content_name">
-                 <p class="p1">
-                 Светлана Котова
-                 </p> 
-             </div>
-             <div class="inner-content_media">   
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/768px-VK.com-logo.svg.png" class="media">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png" class="media">
-             <img src="http://www.lineaviaggi.com/wp-content/uploads/2015/07/youtube-icon-logo-05A29977FC-seeklogo.com_.png" class="media">
-             </div>
-        </div>
-    </div>
-    <div class="inner-contant_text">
-         Уже на втором занятии мы с преподавателем разобрали мою любимую песню, а на третьем занятии я уже играла ее и  пыталась петь под свою игру =)
-    </div>
-</div>  
+    </nav>
 
-
- <!--  3 уч -->
- <div class="inner-content">
-    <div class="inner-content_header">  
-        <div class="inner-content_avatar" style="background-image:url('https://images.unsplash.com/photo-1455503521443-c39d5b861bc4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3b9f1e0dc3aa635c84a0e3af139d134&auto=format&fit=crop&w=1050&q=80');">                  
-        </div>
-        <div class="inner-content_shapka">
-             <div  class="inner-content_name">
-                 <p class="p1">
-                 Кристина Тихомирова
-                 </p> 
-             </div>
-             <div class="inner-content_media">   
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/768px-VK.com-logo.svg.png" class="media">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png" class="media">
-             <img src="http://www.lineaviaggi.com/wp-content/uploads/2015/07/youtube-icon-logo-05A29977FC-seeklogo.com_.png" class="media">
-             </div>
-        </div>
-    </div>
-    <div class="inner-contant_text">
-         Дружелюбная атмосфера, нет жестких рамок как в музыкальной школе. Есть базовые навыки, которые сразу идут в творчество. Очень рада, что записалась на курс, завела тут несколтко новых друзей.
-    </div>
-</div>  
-
-
- <!--  4 уч -->
- <div class="inner-content">
-    <div class="inner-content_header">  
-        <div class="inner-content_avatar" style="background-image:url('https://images.unsplash.com/photo-1523791886474-b24b350f096a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ca38b632180220edb98a28a43ff76d5a&auto=format&fit=crop&w=1234&q=80');">                  
-        </div>
-        <div class="inner-content_shapka">
-             <div  class="inner-content_name">
-                 <p class="p1">
-                 Наталья Касаткина
-                 </p> 
-             </div>
-             <div class="inner-content_media">   
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/768px-VK.com-logo.svg.png" class="media">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png" class="media">
-             <img src="http://www.lineaviaggi.com/wp-content/uploads/2015/07/youtube-icon-logo-05A29977FC-seeklogo.com_.png" class="media">
-             </div>
-        </div>
-    </div>
-    <div class="inner-contant_text">
-         Никакой воды все ясно и понятно, теория только та которая нужна. Освоив необходимые аккорды и ритмические рисунки я теперь могу сыграть практически любую песню из моего трек листа.
-    </div>
-</div>  
-
- <!--  5 уч -->
-<div class="inner-content">
-    <div class="inner-content_header">  
-        <div class="inner-content_avatar" style="background-image:url('https://images.unsplash.com/photo-1474752651386-dc296d69dc90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4486a34adfbf655d7412132d495d22bb&auto=format&fit=crop&w=1050&q=80');">                  
-        </div>
-        <div class="inner-content_shapka">
-             <div  class="inner-content_name">
-                 <p class="p1">
-                 Анна Антипова
-                 </p> 
-             </div>
-             <div class="inner-content_media">   
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/768px-VK.com-logo.svg.png" class="media">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png" class="media">
-             <img src="http://www.lineaviaggi.com/wp-content/uploads/2015/07/youtube-icon-logo-05A29977FC-seeklogo.com_.png" class="media">
-             </div>
-        </div>
-    </div>
-    <div class="inner-contant_text">
-        Преподаватели очень внимателные, если кто-то что-то не понял или что-то неполучается, то вам обязательно помогут и подберут способ справиться с возникшей проблемой.
-    </div>
-</div>      
-
- 
-            
-                   
-</div> 
-    
-  <!--  конец отзывов -->      
-        
-       
-         
-       
-            
-             <div class="inner-content-f5">
-             фото 5
-            </div>
-            
-            <div class="inner-content-1" id="c5">
-                contenr 5
-                <br/>
-                
-                Занятия проходят в центре города на реп базах и антикафе.<br/> звоните и записывайтесь +79155555555<br/>
-                 <iframe class="inner-content-2" src="https://yandex.ru/map-widget/v1/?um=constructor%3A32e276faa44298f616d6b56208da9e308ba207c30c084a326012ec41797455f9&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
-            </div>
-            
-            <div class="inner-content-f6">
-             фото 6
-            </div>
-            
-            <div class="inner-content-f7">
-             фото 7
-            </div>
-            
-            <div class="inner-content-f8">
-             фото 8
-            </div>
-            
-            <div class="inner-content-f9">
-             фото 9
-            </div>
-            
-            <div class="inner-content-f10">
-             фото 10
-            </div>
-            
-            <div class="inner-content-f11">
-             фото 11
-            </div>
-            
-            
-        </div>
-        <div class="footer">
-            <div class="inner-footer">
-                footer
-            </div>
-        </div>
-    </div>
+    <script src="script.js"> </script>
 </body>
+
 </html>
