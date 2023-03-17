@@ -144,10 +144,14 @@
         mouse.down = !mouse.down;
     }
 
+    function setTouchPos({parseInt(e.changedTouches[0].pageX) , parseInt(e.changedTouches[0].pageY)}){
+        [mouse.x, mouse.y] = [parseInt(e.changedTouches[0].pageX),parseInt(e.changedTouches[0].pageY)];
+    }
+
     window.addEventListener('mousemove', setPos); //canvas windField
     window.addEventListener('mousedown', isDown);
     window.addEventListener('mouseup', isDown);
-    window.addEventListener('touchmove', setPos);
+    window.addEventListener('touchmove', setTouchPos);
     window.addEventListener('touchstart', isDown);
     window.addEventListener('touchend', isDown);
 })();
