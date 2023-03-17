@@ -144,14 +144,14 @@
         mouse.down = !mouse.down;
     }
 
-    function setTouchPos({parseInt(e.changedTouches[0].pageX) , parseInt(e.changedTouches[0].pageY)}){
-        [mouse.x, mouse.y] = [parseInt(e.changedTouches[0].pageX),parseInt(e.changedTouches[0].pageY)];
+    function setTouchPos(x, y){
+        [mouse.x, mouse.y] = [x, y];
     }
 
     window.addEventListener('mousemove', setPos); //canvas windField
     window.addEventListener('mousedown', isDown);
     window.addEventListener('mouseup', isDown);
-    window.addEventListener('touchmove', setTouchPos);
+    window.addEventListener('touchmove', setTouchPos(parseInt(e.changedTouches[0].pageX),parseInt(e.changedTouches[0].pageY));
     window.addEventListener('touchstart', isDown);
     window.addEventListener('touchend', isDown);
 })();
